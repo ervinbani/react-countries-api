@@ -1,0 +1,1 @@
+import{j as e,L as n}from"./index-CMxZig9v.js";function r(){return e.jsxs("main",{className:"container",children:[e.jsx("h1",{children:"404 — Page not found"}),e.jsx("p",{children:"The page you are looking for doesn't exist."}),e.jsx("p",{children:e.jsx(n,{to:"/",children:"Return home"})})]})}export{r as default};
