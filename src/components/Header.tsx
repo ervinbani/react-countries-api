@@ -7,7 +7,7 @@ import { useFavorites } from '../contexts/FavoritesContext';
 
 export default function Header() {
   const { query, setQuery } = useFilters();
-  const { toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
   const { favorites } = useFavorites();
   const navigate = useNavigate();
   const [value, setValue] = useState(query);
@@ -49,7 +49,7 @@ export default function Header() {
             )}
           </div>
           <button aria-label="Toggle theme" className="rc-theme-toggle" onClick={toggleTheme}>
-            🌙 Dark Mode
+            {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
           </button>
         </div>
       </div>
