@@ -14,13 +14,24 @@ export function useCountries(filters?: { query?: string; region?: string }) {
       setError(null)
       try {
         let res: Country[] = []
+        
+        // If we have a query, search by name
         if (filters?.query) {
           res = await ApiService.searchByName(filters.query)
-        } else if (filters?.region) {
+          // Then filter by region if specified
+          if (filters?.region) {
+            res = res.filter(c => c.region === filters.region)
+          }
+        } 
+        // If we only have region filter
+        else if (filters?.region) {
           res = await ApiService.filterByRegion(filters.region)
-        } else {
+        } 
+        // Otherwise get all countries
+        else {
           res = await ApiService.getAll()
         }
+        
         if (mounted) setCountries(res)
       } catch (err) {
         if (mounted) setError(err as Error)

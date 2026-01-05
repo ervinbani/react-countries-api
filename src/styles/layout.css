@@ -124,17 +124,23 @@ body {
 
 .chip {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 4px;
-  background: var(--rc-card);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  background: hsl(0, 0%, 100%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   margin: 0.25rem;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 14px;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
+  text-decoration: none;
+  color: hsl(200, 15%, 8%);
+}
+html[data-theme='dark'] .chip {
+  background: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }
 .chip:hover {
   transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
