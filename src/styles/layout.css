@@ -1,14 +1,140 @@
-:root{--rc-bg:#f7f7fb;--rc-card:#ffffff;--rc-text:#0f172a;--rc-muted:#6b7280}
-html[data-theme="dark"]{--rc-bg:#0b1220;--rc-card:#071226;--rc-text:#e6eef8;--rc-muted:#9aa6bb}
-body{background:var(--rc-bg);color:var(--rc-text)}
-.rc-header{border-bottom:1px solid #e6e9ee;background:var(--rc-card)}
-.rc-header-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.75rem}
-.rc-logo{margin:0;font-size:1rem;font-weight:600}
-.rc-controls{display:flex;gap:0.5rem;align-items:center}
-.rc-search{padding:0.5rem;border-radius:6px;border:1px solid #d1d5db}
-.rc-theme-toggle{background:transparent;border:0;cursor:pointer;padding:0.25rem;border-radius:6px}
-.rc-main{max-width:1000px;margin:1.5rem auto;padding:0 1rem;min-height:60vh}
-.rc-footer{border-top:1px solid #e6e9ee;background:var(--rc-card)}
-.rc-footer-inner{max-width:1000px;margin:0 auto;padding:0.75rem;color:var(--rc-muted)}
+:root {
+  /* Light Mode - Style Guide Colors */
+  --rc-bg: hsl(0, 0%, 98%);
+  --rc-card: hsl(0, 0%, 100%);
+  --rc-text: hsl(200, 15%, 8%);
+  --rc-muted: hsl(0, 0%, 52%);
+  --rc-border: hsl(0, 0%, 90%);
+}
+html[data-theme='dark'] {
+  /* Dark Mode - Style Guide Colors */
+  --rc-bg: hsl(207, 26%, 17%);
+  --rc-card: hsl(209, 23%, 22%);
+  --rc-text: hsl(0, 0%, 100%);
+  --rc-muted: hsl(0, 0%, 80%);
+  --rc-border: hsl(209, 23%, 28%);
+}
+body {
+  background: var(--rc-bg);
+  color: var(--rc-text);
+}
+.rc-header {
+  border-bottom: 1px solid var(--rc-border);
+  background: var(--rc-card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+.rc-header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+.rc-logo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+.rc-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.rc-search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.rc-search {
+  padding: 0.75rem 3rem 0.75rem 3rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--rc-card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--rc-text);
+  min-width: 300px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23848484' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3ccircle cx='11' cy='11' r='8'%3e%3c/circle%3e%3cpath d='m21 21-4.35-4.35'%3e%3c/path%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  background-size: 1.2rem;
+}
+.rc-search::placeholder {
+  color: var(--rc-muted);
+}
+.rc-search-clear {
+  position: absolute;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  color: var(--rc-muted);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rc-search-clear:hover {
+  color: var(--rc-text);
+  background: rgba(0, 0, 0, 0.05);
+}
+.rc-theme-toggle {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--rc-text);
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rc-theme-toggle:hover {
+  opacity: 0.7;
+}
+.rc-main {
+  max-width: 1280px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  min-height: 60vh;
+}
+.rc-footer {
+  border-top: 1px solid var(--rc-border);
+  background: var(--rc-card);
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.02);
+}
+.rc-footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  color: var(--rc-muted);
+  font-weight: 300;
+  font-size: 14px;
+}
 
-.chip{display:inline-block;padding:0.25rem 0.5rem;border-radius:6px;background:rgba(0,0,0,0.04);margin:0.25rem}
+.chip {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: var(--rc-card);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin: 0.25rem;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}

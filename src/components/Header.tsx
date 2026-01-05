@@ -1,41 +1,58 @@
-import React, { useEffect, useState } from 'react'
-import { useFilters } from '../contexts/FiltersContext'
-import { useTheme } from '../contexts/ThemeContext'
-import { useDebounce } from '../hooks/useDebounce'
-import { Link } from 'react-router-dom'
-import { useFavorites } from '../contexts/FavoritesContext'
+import React, { useEffect, useState } from 'react';
+import { useFilters } from '../contexts/FiltersContext';
+import { useTheme } from '../contexts/ThemeContext';
+import { useDebounce } from '../hooks/useDebounce';
+import { Link, useNavigate } from 'react-router-dom';
+import { useFavorites } from '../contexts/FavoritesContext';
 
 export default function Header() {
-  const { query, setQuery } = useFilters()
-  const { toggleTheme } = useTheme()
-  const { favorites } = useFavorites()
-  const [value, setValue] = useState(query)
-  const debounced = useDebounce(value, 300)
+  const { query, setQuery } = useFilters();
+  const { toggleTheme } = useTheme();
+  const { favorites } = useFavorites();
+  const navigate = useNavigate();
+  const [value, setValue] = useState(query);
+  const debounced = useDebounce(value, 300);
 
   useEffect(() => {
-    setQuery(debounced)
-  }, [debounced, setQuery])
+    setQuery(debounced);
+  }, [debounced, setQuery]);
+
+  const handleClearSearch = () => {
+    setValue('');
+    setQuery('');
+    navigate('/');
+  };
 
   return (
     <header className="rc-header">
       <div className="rc-header-inner">
-        <h2 className="rc-logo">React Countries</h2>
+        <Link to="/" className="rc-logo" style={{ textDecoration: 'none', color: 'inherit' }}>
+          Where in the world?
+        </Link>
         <div className="rc-controls">
-          <input
-            aria-label="Search countries"
-            className="rc-search"
-            placeholder="Search countries..."
-            value={value}
-            onChange={(e) => setValue(e.target.value)}
-          />
-          <Link to="/favorites" aria-label="Favorites" className="rc-favs">
-            ❤️ {favorites.length}
-          </Link>
+          <div className="rc-search-wrapper">
+            <input
+              aria-label="Search countries"
+              className="rc-search"
+              placeholder="Search for a country..."
+              value={value}
+              onChange={e => setValue(e.target.value)}
+            />
+            {value && (
+              <button
+                aria-label="Clear search"
+                className="rc-search-clear"
+                onClick={handleClearSearch}
+              >
+                ✕
+              </button>
+            )}
+          </div>
           <button aria-label="Toggle theme" className="rc-theme-toggle" onClick={toggleTheme}>
-            🌗
+            🌙 Dark Mode
           </button>
         </div>
       </div>
     </header>
-  )
+  );
 }
