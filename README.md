@@ -64,7 +64,6 @@ A modern, accessible, and responsive single-page application that allows users t
 - **🎯 Type Safety**: Comprehensive TypeScript interfaces and type guards
 - **🧪 Testing**: Unit and component tests with Vitest
 - **⚡ Performance**: Code splitting, lazy loading, and optimized re-renders
-- **🔌 Service Worker**: Offline support and caching capabilities
 
 ## 📸 Screenshots
 
@@ -192,7 +191,6 @@ Ensure you have the following installed:
 ```
 react-countries-api/
 ├── public/
-│   └── service-worker.js          # PWA service worker for offline support
 ├── src/
 │   ├── App.tsx                    # Root component with routing
 │   ├── main.tsx                   # Application entry point
@@ -621,6 +619,9 @@ Found a bug or have a feature request?
 ### In Progress 🚧
 
 - [ ] Service worker for offline support
+- [ ] Enhanced error boundaries
+- [ ] Performance monitoring
+
 - [ ] Enhanced error boundaries
 - [ ] Performance monitoring
 
