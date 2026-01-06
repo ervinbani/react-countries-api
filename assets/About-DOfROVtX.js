@@ -1,0 +1,1 @@
+import{j as t}from"./index-CzoB_aNE.js";function s(){return t.jsxs("main",{className:"container",children:[t.jsx("h1",{children:"About"}),t.jsx("p",{children:"This project demonstrates a React + TypeScript app using the REST Countries API."})]})}export{s as default};
