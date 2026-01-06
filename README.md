@@ -1,15 +1,9 @@
+
 # REST Countries API - Where in the world?
 
-<div align="center">
-
-![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.1.6-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-5.0.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+[Live Demo](https://ervinbani.github.io/react-countries-api)
 
 A modern, accessible, and responsive single-page application that allows users to explore countries around the world. Built with React, TypeScript, and Vite, this project demonstrates professional frontend development practices including component-driven architecture, strong typing, accessibility standards (WCAG 2.1), comprehensive testing, and production-ready builds.
-
-[Live Demo](#) • [Report Bug](https://github.com/ervinbani/react-countries-api/issues) • [Request Feature](https://github.com/ervinbani/react-countries-api/issues)
 
 </div>
 
@@ -65,10 +59,6 @@ A modern, accessible, and responsive single-page application that allows users t
 - **🧪 Testing**: Unit and component tests with Vitest
 - **⚡ Performance**: Code splitting, lazy loading, and optimized re-renders
 
-## 📸 Screenshots
-
-> Add screenshots here to showcase the application UI
-
 ## 🛠️ Technology Stack
 
 ### Frontend
@@ -83,13 +73,6 @@ A modern, accessible, and responsive single-page application that allows users t
 - **React Context API** - Global state management for themes, filters, and favorites
 - **Axios 1.4.0** - Promise-based HTTP client with interceptors
 - **Custom Hooks** - Reusable logic for data fetching, debouncing, and pagination
-
-### Testing
-
-- **Vitest 1.0.0** - Fast unit test framework powered by Vite
-- **Testing Library** - React component testing utilities
-- **Jest DOM** - Custom matchers for DOM assertions
-- **jsdom** - DOM implementation for Node.js testing environment
 
 ### Code Quality
 
@@ -135,14 +118,6 @@ src/
 4. **Components** - UI rendering based on state
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-
-- **Node.js** 14.x or higher (LTS recommended)
-- **npm** 6.x or higher (or **yarn** 1.22+)
-- **Git** for version control
 
 ### Installation
 
@@ -365,41 +340,11 @@ All text meets WCAG AA standards:
 - **Large text**: Minimum 3:1 contrast ratio
 - **Interactive elements**: Clear visual distinction
 
-### Testing Tools
-
-Accessibility tested with:
-
-- **axe DevTools** - Automated accessibility testing
-- **NVDA/JAWS** - Screen reader compatibility
-- **Keyboard only** - Full keyboard navigation testing
-- **Chrome Lighthouse** - Accessibility audit (90+ score)
-
-## 🧪 Testing
-
-Comprehensive testing strategy using **Vitest** and **Testing Library**.
-
-### Test Coverage
-
-- ✅ **Unit Tests**: Core logic and utility functions
-- ✅ **Component Tests**: UI components with user interactions
-- ✅ **Integration Tests**: API service and data flow
-- ✅ **Accessibility Tests**: ARIA attributes and keyboard navigation
-
-### Running Tests
-
-```bash
-# Run all tests
-npm run test
-
-# Run tests in watch mode
-npm run test -- --watch
-
-# Run tests with coverage
-npm run test -- --coverage
-
 # Run specific test file
+
 npm run test CountryCard.test.tsx
-```
+
+````
 
 ### Test Structure
 
@@ -428,7 +373,7 @@ describe('CountryCard', () => {
     expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
-```
+````
 
 ### Tested Components
 
@@ -523,10 +468,6 @@ VITE_ENABLE_PWA=true
 - ✅ Gzip compression
 - ✅ Browser caching headers
 
-## 🤝 Contributing
-
-Contributions are welcome and appreciated! Please follow these guidelines:
-
 ### Development Process
 
 1. **Fork the repository**
@@ -589,18 +530,6 @@ Contributions are welcome and appreciated! Please follow these guidelines:
 - Write **meaningful commit messages**
 - Add **JSDoc comments** for complex functions
 - Keep components **small and focused**
-
-### Reporting Issues
-
-Found a bug or have a feature request?
-
-1. Check existing [Issues](https://github.com/ervinbani/react-countries-api/issues)
-2. Create a new issue with:
-   - Clear title and description
-   - Steps to reproduce (for bugs)
-   - Expected vs actual behavior
-   - Screenshots (if applicable)
-   - Environment details (OS, browser, Node version)
 
 ## 🗺️ Roadmap
 
@@ -685,69 +614,3 @@ Found a bug or have a feature request?
   - Country quiz game
   - Geography challenges
   - Achievements system
-
-### Feedback Welcome!
-
-Have ideas for new features? [Open an issue](https://github.com/ervinbani/react-countries-api/issues) with the `enhancement` label.
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2026 Ervin Bani
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-```
-
-## 👨‍💻 Author
-
-**Ervin Bani**
-
-- GitHub: [@ervinbani](https://github.com/ervinbani)
-- Project Repository: [react-countries-api](https://github.com/ervinbani/react-countries-api)
-- Portfolio: [Add your portfolio link]
-- LinkedIn: [Add your LinkedIn]
-- Email: [Add your email]
-
-## 🙏 Acknowledgments
-
-Special thanks to:
-
-- **[REST Countries API](https://restcountries.com/)** - Free and comprehensive country data
-- **[Frontend Mentor](https://www.frontendmentor.io/)** - Project design inspiration and challenges
-- **[React Team](https://react.dev/)** - Amazing documentation and ecosystem
-- **[Vite Team](https://vitejs.dev/)** - Lightning-fast development experience
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety and developer experience
-- **[Testing Library](https://testing-library.com/)** - Excellent testing utilities
-- **[Font Awesome](https://fontawesome.com/)** - Beautiful icons
-- **Open Source Community** - For continuous inspiration and support
-
-## 📊 Project Stats
-
-![GitHub stars](https://img.shields.io/github/stars/ervinbani/react-countries-api?style=social)
-![GitHub forks](https://img.shields.io/github/forks/ervinbani/react-countries-api?style=social)
-![GitHub issues](https://img.shields.io/github/issues/ervinbani/react-countries-api)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/ervinbani/react-countries-api)
-
----
-
-<div align="center">
-
-Made with ❤️ by [Ervin Bani](https://github.com/ervinbani)
-
-If you found this project helpful, please consider giving it a ⭐!
-
-[⬆ Back to Top](#rest-countries-api---where-in-the-world)
-
-</div>
